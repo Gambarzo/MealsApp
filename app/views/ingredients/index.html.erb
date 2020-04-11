@@ -1,0 +1,23 @@
+<div class="header">
+  <h1>MealsApp</h1>
+  <p>InPalace Design</p>
+</div>
+<h1>Todos los ingredientes</h1>
+
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th></th>
+  </tr>
+ 
+  <% @ingredients.each do |ingredient| %>
+    <tr>
+      <td><%= ingredient.name %></td>
+      <td><%= ingredient.quantity %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Back', controller: 'welcome' %>

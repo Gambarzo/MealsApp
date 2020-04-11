@@ -1,0 +1,40 @@
+<h1>Edit Recipe</h1>
+
+<%= form_with scope: :recipe, url: recipes_path, local: true do |form| %>
+
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+
+<h2>Add an ingredient:</h2>
+<%= form_with(model: [ @recipe, @recipe.ingredients.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :quantity %><br>
+    <%= form.text_area :quantity %>
+  </p>
+  <p>
+    <%= form.label :unit %><br>
+    <%= form.text_area :unit %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+ 
+<%= link_to 'Back', recipes_path %>

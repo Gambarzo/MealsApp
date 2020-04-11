@@ -1,0 +1,44 @@
+<div class="header">
+  <h1>MealsApp</h1>
+  <p>InPalace Design</p>
+</div>
+
+<body>
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #0000;
+}
+</style>
+<ul>
+  <li><a <%= link_to 'Recetas', controller: 'recipes' %></a></li>
+  <li><a <%= link_to 'Ingredientes', controller: 'ingredients' %></a></li>
+  <li><a href="#contact">Lista de la compra</a></li>
+  <li style="float:right"><a class="active" href="#about">Sobre nosotros</a></li>
+</ul>
+
+</body>
